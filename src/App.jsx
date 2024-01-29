@@ -4,7 +4,7 @@ import './App.css'
 function App() {
 
     useEffect(() => {
-
+        getData()
     }, [])
 
     const handleError = error => {
