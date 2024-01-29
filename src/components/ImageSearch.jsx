@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const ImageSearch = () => {
+const ImageSearch = ({setText}) => {
 
     const [search, setSearch] = useState('')
 
@@ -10,7 +10,7 @@ const ImageSearch = () => {
 
     const onSubmitHandler = e => {
         e.preventDefault();
-
+        setText(search)
         setSearch('')
     }
 
