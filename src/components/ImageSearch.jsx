@@ -1,5 +1,13 @@
 import React, {useState} from 'react'
 
+const onSubmitHandler = () => {
+
+}
+
+const searchTextHandler = () => {
+
+}
+
 const ImageSearch = () => {
     return(
         <div>
