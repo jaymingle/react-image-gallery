@@ -19,6 +19,9 @@ useEffect(() => {
                 handleError("Issues fetching data")
             }
 
+            const data = await response.json()
+            console.log(data)
+
         }catch(e){
             handleError(e)
         }
