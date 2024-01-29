@@ -11,7 +11,8 @@ useEffect(() => {
     // getData()
 }, [])
 
-    console.log(import.meta.env.VITE_PIXABAY_API_KEY)
+    const api_key = import.meta.env.VITE_PIXABAY_API_KEY
+    console.log(api_key)
 
     // const handleError = err => {
     //     throw new Error("Error getting data: ", err)
