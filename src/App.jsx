@@ -6,7 +6,7 @@ function App() {
 
     const [images, setImages] = useState([])
     const [isLoading, setIsLoading] = useState(true)
-    const [term, setTerm] = useState('purple')
+    const [term, setTerm] = useState('rose')
 
 useEffect(() => {
     getData()
