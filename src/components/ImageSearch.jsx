@@ -5,7 +5,7 @@ const ImageSearch = () => {
     const [search, setSearch] = useState('')
 
     const searchTextHandler = () => {
-
+        setSearch(e.target.value)
     }
 
     const onSubmitHandler = (e) => {
