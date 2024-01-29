@@ -20,7 +20,7 @@ useEffect(() => {
     const getData = async() => {
         try{
 
-            const response = await fetch(`https://pixabay.com/api/?key=${api_key}&q=yellow+flowers&image_type=photo&pretty=true`)
+            const response = await fetch(`https://pixabay.com/api/?key=${api_key}&q=${term}+flowers&image_type=photo&pretty=true`)
             if(!response.ok){
                 handleError("Issues fetching data")
             }
