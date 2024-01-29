@@ -7,7 +7,7 @@ function App() {
 
 useEffect(() => {
     getData()
-}, [photo])
+}, [])
 
     const handleError = err => {
         throw new Error("Error getting data: ", err)
@@ -23,8 +23,7 @@ useEffect(() => {
 
             const data = await response.json()
             setPhoto(data.hits)
-            // console.log(data)
-            console.log("Photo", photo)
+            console.log(data.hits)
 
         }catch(e){
             handleError(e)
