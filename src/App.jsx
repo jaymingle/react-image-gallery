@@ -4,7 +4,7 @@ import './App.css'
 function App() {
 
     const [images, setImages] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     const [term, setTerm] = useState('red')
 
 useEffect(() => {
@@ -27,6 +27,7 @@ useEffect(() => {
 
             const data = await response.json()
             setImages(data.hits)
+            setIsLoading(false)
             console.log(data.hits)
 
         }catch(e){
