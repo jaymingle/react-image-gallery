@@ -11,6 +11,8 @@ useEffect(() => {
     getData()
 }, [])
 
+    console.log(process.env.REACT_APP_PIXABAY_API_KEY)
+
     const handleError = err => {
         throw new Error("Error getting data: ", err)
     }
