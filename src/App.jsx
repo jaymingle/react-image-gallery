@@ -39,7 +39,7 @@ useEffect(() => {
   return (
    <div className="container mx-auto">
        <div className="mt-20 flex items-center justify-center">
-            <ImageSearch searchText={(term) => setTerm(text)}/>
+            <ImageSearch searchText={(text) => setTerm(text)}/>
        </div>
        <div className="mt-16">
            {isLoading ? <h2 className="text-6xl text-center mx-auto">Data Loading ....</h2> : <div className="grid grid-cols-3 gap-4">
