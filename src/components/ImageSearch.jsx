@@ -1,14 +1,15 @@
 import React, {useState} from 'react'
 
-const onSubmitHandler = () => {
-
-}
-
-const searchTextHandler = () => {
-
-}
-
 const ImageSearch = () => {
+
+    const searchTextHandler = () => {
+
+    }
+
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+    }
+
     return(
         <div>
             <div className='max-w-sm rounded overflow-hidden my-10 mx-auto'>
