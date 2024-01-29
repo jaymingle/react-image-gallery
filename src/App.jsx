@@ -39,7 +39,7 @@ useEffect(() => {
 
   return (
    <div>
-        <ImageCard/>
+        <ImageCard images={images}/>
    </div>
   )
 }
