@@ -7,8 +7,16 @@ useEffect(() => {
     getData()
 }, [])
 
-    const getData = async() => {
+    const handleError = err => {
 
+    }
+
+    const getData = async() => {
+        try{
+
+        }catch(e){
+
+        }
     }
 
   return (
