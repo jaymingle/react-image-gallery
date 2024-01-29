@@ -5,6 +5,7 @@ function App() {
 
     const [images, setImages] = useState([])
     const [isLoading, setIsLoading] = useState(false)
+    const [term, setTerm] = useState('')
 
 useEffect(() => {
     getData()
