@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
 
-    const [data, setData] = useState([])
+    const [photo, setPhoto] = useState([])
 
 useEffect(() => {
     getData()
@@ -22,9 +22,9 @@ useEffect(() => {
             }
 
             const data = await response.json()
-            setData(data)
+            setPhoto(data)
             console.log(data)
-            console.log(data)
+            console.log("Photo", photo)
 
         }catch(e){
             handleError(e)
