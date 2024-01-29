@@ -6,6 +6,7 @@ const ImageSearch = () => {
 
     const searchTextHandler = () => {
         setSearch(e.target.value)
+        console.log(search)
     }
 
     const onSubmitHandler = (e) => {
