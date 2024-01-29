@@ -3,7 +3,8 @@ import './App.css'
 
 function App() {
 
-    const [photo, setPhoto] = useState([])
+    const [images, setImages] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
 
 useEffect(() => {
     getData()
@@ -22,7 +23,7 @@ useEffect(() => {
             }
 
             const data = await response.json()
-            setPhoto(data.hits)
+            setImages(data.hits)
             console.log(data.hits)
 
         }catch(e){
