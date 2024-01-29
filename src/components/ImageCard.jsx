@@ -1,6 +1,8 @@
 import React from "react";
 
-const ImageCard = () => {
+const ImageCard = ({images}) => {
+
+    const {pageURL, } = images
     return(
         <div className="max-w-sm rounded overflow-hidden shadow-xl">
             <img className="w-full" src="https://source.unsplash.com/random/" alt=""/>

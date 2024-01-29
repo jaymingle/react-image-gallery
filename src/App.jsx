@@ -30,7 +30,7 @@ useEffect(() => {
             setImages(data.hits)
             setIsLoading(false)
             console.log(images)
-            // console.log(data.hits)
+            console.log(data.hits)
 
         }catch(e){
             handleError(e)
