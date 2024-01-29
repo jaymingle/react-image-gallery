@@ -20,6 +20,8 @@ function App() {
                 handleError(response)
             }
 
+            console.log(response)
+
         }catch(e){
             handleError(e)
         }
