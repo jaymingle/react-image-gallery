@@ -8,14 +8,16 @@ useEffect(() => {
 }, [])
 
     const handleError = err => {
-
+        throw new Error("Error getting data: ", err)
     }
 
     const getData = async() => {
         try{
 
-        }catch(e){
+            const response =
 
+        }catch(e){
+            handleError(e)
         }
     }
 
