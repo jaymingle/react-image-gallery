@@ -14,7 +14,7 @@ useEffect(() => {
     const getData = async() => {
         try{
 
-            const response =
+            const response = await fetch("")
 
         }catch(e){
             handleError(e)
