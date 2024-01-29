@@ -19,7 +19,7 @@ function App() {
                 // console.error("Error")
                 throw new Error("Could not get response data")
             }
-            const data = await getData.json()
+            const data = await response.json()
             console.log(data)
 
         }catch(e){
