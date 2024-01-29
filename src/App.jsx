@@ -3,11 +3,11 @@ import './App.css'
 
 function App() {
 
-    const [photo, setPhoto] = useState()
+    const [photo, setPhoto] = useState([])
 
 useEffect(() => {
     getData()
-}, [])
+}, [photo])
 
     const handleError = err => {
         throw new Error("Error getting data: ", err)
@@ -23,7 +23,7 @@ useEffect(() => {
 
             const data = await response.json()
             setPhoto(data.hits)
-            console.log(data)
+            // console.log(data)
             console.log("Photo", photo)
 
         }catch(e){
