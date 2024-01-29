@@ -41,6 +41,9 @@ useEffect(() => {
        <div className="mt-20 flex items-center justify-center">
             <ImageSearch searchText={(text) => setTerm(text)}/>
        </div>
+
+       {!isLoading && images.length === 0 && <h1 className="text-5xl text-center mx-auto">No Images Found....</h1>}
+
        <div className="mt-16">
            {isLoading ? <h2 className="text-6xl text-center mx-auto">Data Loading ....</h2> : <div className="grid grid-cols-3 gap-4">
                {images.map(image => <ImageCard key={image.id} image={image}/>)}
