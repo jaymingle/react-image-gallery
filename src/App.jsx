@@ -1,7 +1,23 @@
-
+import React, {useEffect, useState} from "react";
 import './App.css'
 
 function App() {
+
+    useEffect(() => {
+
+    }, [])
+
+    const handleError = error => {
+        throw new Error("Trouble fetching data", error)
+    }
+
+    const getData = async () => {
+        try{
+
+        }catch(e){
+
+        }
+    }
 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-xl">
