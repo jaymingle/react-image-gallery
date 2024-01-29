@@ -8,32 +8,31 @@ function App() {
     const [term, setTerm] = useState('')
 
 useEffect(() => {
-    // getData()
+    getData()
 }, [])
 
     const api_key = import.meta.env.VITE_PIXABAY_API_KEY
-    console.log(api_key)
 
-    // const handleError = err => {
-    //     throw new Error("Error getting data: ", err)
-    // }
-    //
-    // const getData = async() => {
-    //     try{
-    //
-    //         const response = await fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=yellow+flowers&image_type=photo&pretty=true`)
-    //         if(!response.ok){
-    //             handleError("Issues fetching data")
-    //         }
-    //
-    //         const data = await response.json()
-    //         setImages(data.hits)
-    //         console.log(data.hits)
-    //
-    //     }catch(e){
-    //         handleError(e)
-    //     }
-    // }
+    const handleError = err => {
+        throw new Error("Error getting data: ", err)
+    }
+
+    const getData = async() => {
+        try{
+
+            const response = await fetch(`https://pixabay.com/api/?key=${api_key}&q=yellow+flowers&image_type=photo&pretty=true`)
+            if(!response.ok){
+                handleError("Issues fetching data")
+            }
+
+            const data = await response.json()
+            setImages(data.hits)
+            console.log(data.hits)
+
+        }catch(e){
+            handleError(e)
+        }
+    }
 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-xl">
