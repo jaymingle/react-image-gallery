@@ -7,20 +7,20 @@ const ImageCard = ({ image }) => {
             {/*<img className="w-full" src="https://source.unsplash.com/random/" alt=""/>*/}
             <img className="w-full" src={`${image.webformatURL}`} alt="Image"/>
             <div className="px-6 py-4">
-                <div className="font-bold text-purple-500 text-xl">Photo by John Doe</div>
+                <div className="font-bold text-purple-500 text-xl">Photo by {image.user}</div>
                 <div>
                     <ul>
                         <li>
                             <strong>Views: </strong>
-                            4000
+                            {image.views}
                         </li>
                         <li>
-                            <strong>Dowloads: </strong>
-                            4000
+                            <strong>Downloads: </strong>
+                            {image.downloads}
                         </li>
                         <li>
                             <strong>Likes: </strong>
-                            4000
+                            {image.likes}
                         </li>
                     </ul>
                 </div>
