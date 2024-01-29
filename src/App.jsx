@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import './App.css'
+import ImageCard from "./components/ImageCard.jsx";
 
 function App() {
 
@@ -37,7 +38,7 @@ useEffect(() => {
 
   return (
    <div>
-
+        <ImageCard/>
    </div>
   )
 }
