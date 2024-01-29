@@ -3,6 +3,8 @@ import './App.css'
 
 function App() {
 
+    const [data, setData] = useState([])
+
 useEffect(() => {
     getData()
 }, [])
