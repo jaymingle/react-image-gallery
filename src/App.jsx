@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './App.css'
 import ImageCard from "./components/ImageCard.jsx";
+import ImageSearch from "./components/ImageSearch.jsx";
 
 function App() {
 
@@ -37,10 +38,10 @@ useEffect(() => {
 
   return (
    <div className="container mx-auto">
-       <div className="mx-auto">
-
+       <div className="mt-20 flex items-center justify-center">
+            <ImageSearch/>
        </div>
-       <div className="mt-40">
+       <div className="mt-16">
            {isLoading ? <h2 className="text-6xl text-center mx-auto">Data Loading ....</h2> : <div className="grid grid-cols-3 gap-4">
                {images.map(image => <ImageCard key={image.id} image={image}/>)}
            </div>}
