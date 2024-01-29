@@ -13,14 +13,12 @@ function App() {
 
     const getData = async () => {
         try{
-            const getData = await fetch("https://pixabay.com/api/?key=42083097-dc325ca6c7c2614f932026684&q=yellow+flowers&image_type=photo&pretty=true")
-            const response = await getData.json()
-
+            const response = await fetch("https://pixabay.com/api/?key=42083097-dc325ca6c7c2614f932026684&q=yellow+flowers&image_type=photo&pretty=true")
             if(!response.ok){
                 handleError(response)
             }
-
-            console.log(response)
+            const data = await getData.json()
+            console.log(data)
 
         }catch(e){
             handleError(e)
