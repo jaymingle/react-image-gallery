@@ -14,7 +14,8 @@ useEffect(() => {
     const getData = async() => {
         try{
 
-            const response = await fetch("")
+            const response = await fetch("https://pixabay.com/api/?key=42083097-dc325ca6c7c2614f932026684&q=yellow+flowers&image_type=photo&pretty=true")
+
 
         }catch(e){
             handleError(e)
