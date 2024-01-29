@@ -4,13 +4,14 @@ const ImageSearch = () => {
 
     const [search, setSearch] = useState('')
 
-    const searchTextHandler = () => {
+    const searchTextHandler = e => {
         setSearch(e.target.value)
-        console.log(search)
     }
 
-    const onSubmitHandler = (e) => {
+    const onSubmitHandler = e => {
         e.preventDefault();
+
+        setSearch('')
     }
 
     return(
