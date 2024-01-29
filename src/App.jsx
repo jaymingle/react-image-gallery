@@ -39,9 +39,12 @@ useEffect(() => {
 
   return (
    <div className="container mx-auto">
-       {isLoading ? '<h2>Data Loading ....</h2>' : <div className="grid grid-cols-3 gap-4">
-           {images.map(image => <ImageCard key={image.id} image={image}/>)}
-       </div>}
+       <div className="mt-40">
+           {isLoading ? '<h2 className="text-6xl text-center mx-auto">Data Loading ....</h2>' : <div className="grid grid-cols-3 gap-4">
+               {images.map(image => <ImageCard key={image.id} image={image}/>)}
+           </div>}
+       </div>
+
    </div>
   )
 }
