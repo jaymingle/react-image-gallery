@@ -22,7 +22,7 @@ useEffect(() => {
             }
 
             const data = await response.json()
-            setPhoto(data)
+            setPhoto(data.hits)
             console.log(data)
             console.log("Photo", photo)
 
