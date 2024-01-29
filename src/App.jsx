@@ -18,7 +18,7 @@ useEffect(() => {
     const getData = async() => {
         try{
 
-            const response = await fetch("https://pixabay.com/api/?key=42083097-dc325ca6c7c2614f932026684&q=yellow+flowers&image_type=photo&pretty=true")
+            const response = await fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=yellow+flowers&image_type=photo&pretty=true`)
             if(!response.ok){
                 handleError("Issues fetching data")
             }
