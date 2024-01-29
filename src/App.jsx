@@ -11,7 +11,7 @@ function App() {
 
 useEffect(() => {
     getData()
-}, [])
+}, [term])
 
     const api_key = import.meta.env.VITE_PIXABAY_API_KEY
 
