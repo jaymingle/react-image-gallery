@@ -7,21 +7,25 @@ function App() {
         getData()
     }, [])
 
-    const handleError = error => {
-        throw new Error("Trouble fetching data", error)
-    }
+    // const handleError = error => {
+    //     throw new Error("Trouble fetching data", error)
+    // }
 
     const getData = async () => {
         try{
             const response = await fetch("https://pixabay.com/api/?key=42083097-dc325ca6c7c2614f932026684&q=yellow+flowers&image_type=photo&pretty=true")
             if(!response.ok){
-                handleError(response)
+                // handleError(response)
+                // console.error("Error")
+                throw new Error("Could not get response data")
             }
             const data = await getData.json()
             console.log(data)
 
         }catch(e){
-            handleError(e)
+            // handleError(e)
+            console.error(e)
+
         }
     }
 
