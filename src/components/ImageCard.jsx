@@ -4,9 +4,6 @@ const ImageCard = ({ image }) => {
 
     const tags = image.tags
     const arrTags = tags.split(",")
-    console.log(arrTags)
-
-    const randomKey = Math.floor(Math.random() * 10000000)
 
     return(
         <div className="max-w-sm rounded overflow-hidden shadow-xl">
@@ -31,7 +28,7 @@ const ImageCard = ({ image }) => {
                     </ul>
                 </div>
                 <div className="px-6 py-4">
-                    {arrTags.map(arr => <span key={arr} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#{arr}</span>)}
+                    {arrTags.map(arr => <span key={image.id} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#{arr}</span>)}
                 </div>
             </div>
         </div>
